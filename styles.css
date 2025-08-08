@@ -570,6 +570,68 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: var(--shadow);
 }
 
+/* Platform Tabs */
+.platform-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.platform-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    color: #666;
+}
+
+.platform-tab:hover {
+    background: rgba(255, 255, 255, 0.5);
+    color: var(--dark-color);
+}
+
+.platform-tab.active {
+    background: var(--gradient-primary);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+.platform-tab i {
+    font-size: 1.2rem;
+}
+
+.platform-player {
+    display: none;
+    margin-bottom: 1.5rem;
+}
+
+.platform-player.active {
+    display: block;
+}
+
+.platform-player iframe {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.soundcloud-embed {
+    margin: 1rem 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.soundcloud-embed iframe {
+    border-radius: var(--border-radius);
+}
+
 .player-header h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -702,9 +764,230 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(5px);
 }
 
+.podcast-item.active {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.podcast-item.active i {
+    color: white;
+}
+
 .podcast-item i {
     font-size: 1.5rem;
     color: var(--primary-color);
+}
+
+.podcast-player {
+    margin-bottom: 1.5rem;
+}
+
+.podcast-player iframe {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.soundcloud-tracks {
+    background: var(--light-color);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.soundcloud-tracks h4 {
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.track-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.track-list .track-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: white;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.track-list .track-item:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.track-list .track-info {
+    flex: 1;
+}
+
+.track-list .track-info h5 {
+    margin: 0 0 0.25rem 0;
+    color: var(--dark-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.track-list .track-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.track-list .track-actions {
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.track-list .track-item:hover .track-actions {
+    opacity: 1;
+}
+
+.track-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.track-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.track-item:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow);
+}
+
+.track-info h5 {
+    margin: 0 0 0.25rem 0;
+    color: var(--dark-color);
+    font-size: 1rem;
+}
+
+.track-info p {
+    margin: 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.soundcloud-profile {
+    text-align: center;
+}
+
+.quick-links {
+    margin-top: 2rem;
+}
+
+.quick-links h4 {
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.link-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.quick-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    color: var(--dark-color);
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.quick-link:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+    color: var(--primary-color);
+}
+
+.quick-link i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.quick-link span {
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Track Modal */
+.track-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.track-modal .modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.track-modal .modal-content {
+    background: white;
+    border-radius: var(--border-radius);
+    max-width: 500px;
+    width: 100%;
+    box-shadow: var(--shadow-hover);
+}
+
+.track-modal .modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-modal .modal-header h3 {
+    margin: 0;
+    color: var(--dark-color);
+}
+
+.track-modal .modal-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.track-modal .modal-body {
+    padding: 1.5rem;
 }
 
 .podcast-info h4 {

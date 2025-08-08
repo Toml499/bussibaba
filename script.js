@@ -46,24 +46,65 @@ const playBtn = document.querySelector('.play-btn');
 const progress = document.querySelector('.progress');
 const timeDisplay = document.querySelector('.time');
 const tracks = document.querySelectorAll('.track');
+const audioPlayer = document.getElementById('audio-player');
 let isPlaying = false;
-let currentTrack = 0;
-let currentTime = 0;
-let duration = 0;
 
-// Simulate music player functionality
+// Real music player functionality
 playBtn.addEventListener('click', () => {
-    isPlaying = !isPlaying;
-    const icon = playBtn.querySelector('i');
-    
-    if (isPlaying) {
-        icon.className = 'fas fa-pause';
-        simulatePlayback();
+    if (audioPlayer.src) {
+        if (isPlaying) {
+            audioPlayer.pause();
+        } else {
+            audioPlayer.play();
+        }
     } else {
-        icon.className = 'fas fa-play';
-        clearInterval(window.playbackInterval);
+        // Fallback to simulation if no audio file
+        isPlaying = !isPlaying;
+        const icon = playBtn.querySelector('i');
+        
+        if (isPlaying) {
+            icon.className = 'fas fa-pause';
+            simulatePlayback();
+        } else {
+            icon.className = 'fas fa-play';
+            clearInterval(window.playbackInterval);
+        }
     }
 });
+
+// Real audio player events
+if (audioPlayer) {
+    audioPlayer.addEventListener('play', () => {
+        isPlaying = true;
+        playBtn.querySelector('i').className = 'fas fa-pause';
+    });
+    
+    audioPlayer.addEventListener('pause', () => {
+        isPlaying = false;
+        playBtn.querySelector('i').className = 'fas fa-play';
+    });
+    
+    audioPlayer.addEventListener('timeupdate', () => {
+        if (audioPlayer.duration) {
+            const progressPercent = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+            progress.style.width = `${progressPercent}%`;
+            
+            const currentMinutes = Math.floor(audioPlayer.currentTime / 60);
+            const currentSeconds = Math.floor(audioPlayer.currentTime % 60);
+            const durationMinutes = Math.floor(audioPlayer.duration / 60);
+            const durationSeconds = Math.floor(audioPlayer.duration % 60);
+            
+            timeDisplay.textContent = `${currentMinutes}:${currentSeconds.toString().padStart(2, '0')} / ${durationMinutes}:${durationSeconds.toString().padStart(2, '0')}`;
+        }
+    });
+    
+    audioPlayer.addEventListener('ended', () => {
+        isPlaying = false;
+        playBtn.querySelector('i').className = 'fas fa-play';
+        progress.style.width = '0%';
+        timeDisplay.textContent = '0:00 / 0:00';
+    });
+}
 
 function simulatePlayback() {
     currentTime = 0;
@@ -106,6 +147,70 @@ tracks.forEach((track, index) => {
         clearInterval(window.playbackInterval);
         progress.style.width = '0%';
         timeDisplay.textContent = '0:00 / 0:00';
+    });
+});
+
+// Platform tabs functionality
+const platformTabs = document.querySelectorAll('.platform-tab');
+const platformPlayers = document.querySelectorAll('.platform-player');
+
+platformTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const platform = tab.getAttribute('data-platform');
+        
+        // Remove active class from all tabs
+        platformTabs.forEach(t => t.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        tab.classList.add('active');
+        
+        // Hide all players
+        platformPlayers.forEach(player => player.classList.remove('active'));
+        
+        // Show selected player
+        const selectedPlayer = document.getElementById(`${platform}-player`);
+        if (selectedPlayer) {
+            selectedPlayer.classList.add('active');
+        }
+    });
+});
+
+// SoundCloud track play buttons
+const trackItems = document.querySelectorAll('.track-item');
+
+trackItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const trackUrl = item.getAttribute('data-track-url');
+        const trackTitle = item.querySelector('h5').textContent;
+        
+        // Open the track directly on SoundCloud
+        window.open(trackUrl, '_blank');
+    });
+});
+
+// Podcast switching functionality
+const podcastItems = document.querySelectorAll('.podcast-item');
+const podcastPlayer = document.querySelector('.podcast-player iframe');
+
+const podcastEpisodes = {
+    episode1: 'https://open.spotify.com/embed/episode/0GNtGnZ4l1JHdwJ4Sr2mng?utm_source=generator&utm_campaign=embed&utm_medium=desktop',
+    episode2: 'https://open.spotify.com/embed/episode/1Mr1840ZEXibScycl9DsC7?utm_source=generator&utm_campaign=embed&utm_medium=desktop'
+};
+
+podcastItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const episode = item.getAttribute('data-podcast');
+        
+        // Remove active class from all items
+        podcastItems.forEach(i => i.classList.remove('active'));
+        
+        // Add active class to clicked item
+        item.classList.add('active');
+        
+        // Update player source
+        if (podcastPlayer && podcastEpisodes[episode]) {
+            podcastPlayer.src = podcastEpisodes[episode];
+        }
     });
 });
 

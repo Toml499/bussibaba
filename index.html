@@ -21,8 +21,8 @@
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#events" class="nav-link">Events</a>
-                <a href="#tickets" class="nav-link">Tickets</a>
-                <a href="#shop" class="nav-link">Shop</a>
+                <a href="tickets.html" class="nav-link">Tickets</a>
+                <a href="shop.html" class="nav-link">Shop</a>
                 <a href="#music" class="nav-link">Music</a>
                 <a href="#booking" class="nav-link">Booking</a>
                 <a href="#contact" class="nav-link">Kontakt</a>
@@ -46,6 +46,7 @@
                 <p class="hero-subtitle">Wo Beats vibrieren, Körper tanzen und die Nacht zur Familie wird.</p>
                 <div class="hero-buttons">
                     <a href="#events" class="btn btn-primary">Events entdecken</a>
+                    <a href="shop.html" class="btn btn-secondary">Shop</a>
                     <a href="#music" class="btn btn-secondary">Music hören</a>
                 </div>
             </div>
@@ -113,7 +114,7 @@
                             <span class="genre-tag">House</span>
                             <span class="genre-tag">Techno</span>
                         </div>
-                        <a href="#tickets" class="btn btn-small">Tickets</a>
+                        <a href="tickets.html" class="btn btn-small">Tickets</a>
                     </div>
                 </div>
                 <div class="event-card">
@@ -131,7 +132,7 @@
                             <span class="genre-tag">Deep House</span>
                             <span class="genre-tag">Afro House</span>
                         </div>
-                        <a href="#tickets" class="btn btn-small">Tickets</a>
+                        <a href="tickets.html" class="btn btn-small">Tickets</a>
                     </div>
                 </div>
                 <div class="event-card">
@@ -149,7 +150,7 @@
                             <span class="genre-tag">Tech House</span>
                             <span class="genre-tag">Electro</span>
                         </div>
-                        <a href="#tickets" class="btn btn-small">Tickets</a>
+                        <a href="tickets.html" class="btn btn-small">Tickets</a>
                     </div>
                 </div>
             </div>
@@ -196,50 +197,185 @@
             <div class="music-content">
                 <div class="music-player">
                     <div class="player-header">
-                        <h3>Bussi Baba Mixtapes</h3>
-                        <p>Hör dir die handverlesene Playlist auf SoundCloud an, die dich direkt in gute Laune versetzt.</p>
+                        <h3>Bussi Baba Music</h3>
+                        <p>Entdecke unsere Musik auf deiner Lieblingsplattform</p>
                     </div>
-                    <div class="player-controls">
-                        <button class="play-btn"><i class="fas fa-play"></i></button>
-                        <div class="progress-bar">
-                            <div class="progress"></div>
-                        </div>
-                        <span class="time">0:00 / 0:00</span>
+                    
+                    <!-- Platform Tabs -->
+                    <div class="platform-tabs">
+                        <button class="platform-tab active" data-platform="spotify">
+                            <i class="fab fa-spotify"></i>
+                            <span>Spotify</span>
+                        </button>
+                        <button class="platform-tab" data-platform="soundcloud">
+                            <i class="fab fa-soundcloud"></i>
+                            <span>SoundCloud</span>
+                        </button>
+                        <button class="platform-tab" data-platform="youtube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </button>
                     </div>
-                    <div class="playlist">
-                        <div class="track active">
-                            <span class="track-number">01</span>
-                            <span class="track-title">Bussi Baba Mixtape Vol. 1</span>
-                            <span class="track-duration">45:30</span>
+                    
+                    <!-- Spotify Player -->
+                    <div class="platform-player active" id="spotify-player">
+                        <iframe 
+                            style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/playlist/3nEcVVLvzdqRjVkxMRgGEc?utm_source=generator&utm_campaign=embed&utm_medium=desktop" 
+                            width="100%" 
+                            height="352" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    
+                    <!-- SoundCloud Player -->
+                    <div class="platform-player" id="soundcloud-player">
+                        <div class="soundcloud-tracks">
+                            <h4>Bussi Baba Tracks auf SoundCloud</h4>
+                            
+                            <div class="track-list">
+                                <div class="track-item" data-track-url="https://soundcloud.com/bussi-baba/bussi-baba-july-mix-by-roa-2025">
+                                    <div class="track-info">
+                                        <h5>Bussi Baba July Mix by roa. 2025</h5>
+                                        <p>House, Techno - 45:30</p>
+                                    </div>
+                                    <div class="track-actions">
+                                        <button class="btn btn-small play-track">
+                                            <i class="fab fa-soundcloud"></i> Anhören
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="track-item" data-track-url="https://soundcloud.com/bussi-baba/track-2">
+                                    <div class="track-info">
+                                        <h5>Deep House Vibes</h5>
+                                        <p>Deep House - 52:15</p>
+                                    </div>
+                                    <div class="track-actions">
+                                        <button class="btn btn-small play-track">
+                                            <i class="fab fa-soundcloud"></i> Anhören
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="track-item" data-track-url="https://soundcloud.com/bussi-baba/track-3">
+                                    <div class="track-info">
+                                        <h5>Techno Nights</h5>
+                                        <p>Techno - 48:20</p>
+                                    </div>
+                                    <div class="track-actions">
+                                        <button class="btn btn-small play-track">
+                                            <i class="fab fa-soundcloud"></i> Anhören
+                                        </button>
+                                    </div>
+                                </div>
+                                
+                                <div class="track-item" data-track-url="https://soundcloud.com/bussi-baba/track-4">
+                                    <div class="track-info">
+                                        <h5>Summer Grooves</h5>
+                                        <p>House - 41:35</p>
+                                    </div>
+                                    <div class="track-actions">
+                                        <button class="btn btn-small play-track">
+                                            <i class="fab fa-soundcloud"></i> Anhören
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="soundcloud-profile">
+                                <a href="https://soundcloud.com/bussi-baba" target="_blank" class="btn btn-secondary">
+                                    <i class="fab fa-soundcloud"></i> Vollständiges Profil
+                                </a>
+                            </div>
                         </div>
-                        <div class="track">
-                            <span class="track-number">02</span>
-                            <span class="track-title">Deep House Vibes</span>
-                            <span class="track-duration">52:15</span>
+                    </div>
+                    
+                    <!-- YouTube Player -->
+                    <div class="platform-player" id="youtube-player">
+                        <iframe 
+                            width="100%" 
+                            height="315" 
+                            src="https://www.youtube.com/embed/bTexu00AX40" 
+                            title="Bussi Baba Mix" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <!-- Fallback Player -->
+                    <div class="fallback-player" style="display: none;">
+                        <div class="player-controls">
+                            <button class="play-btn"><i class="fas fa-play"></i></button>
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                            <span class="time">0:00 / 0:00</span>
+                            <audio id="audio-player" preload="metadata">
+                                <source src="music/bussi-baba-mixtape.mp3" type="audio/mpeg">
+                                <source src="music/bussi-baba-mixtape.ogg" type="audio/ogg">
+                                Your browser does not support the audio element.
+                            </audio>
                         </div>
-                        <div class="track">
-                            <span class="track-number">03</span>
-                            <span class="track-title">Techno Nights</span>
-                            <span class="track-duration">48:20</span>
+                    </div>
+                    
+                    <div class="quick-links">
+                        <h4>Quick Access</h4>
+                        <div class="link-grid">
+                            <a href="https://open.spotify.com/playlist/3nEcVVLvzdqRjVkxMRgGEc" target="_blank" class="quick-link">
+                                <i class="fab fa-spotify"></i>
+                                <span>Spotify Playlist</span>
+                            </a>
+                            <a href="https://soundcloud.com/bussi-baba" target="_blank" class="quick-link">
+                                <i class="fab fa-soundcloud"></i>
+                                <span>SoundCloud</span>
+                            </a>
+                            <a href="https://www.youtube.com/watch?v=bTexu00AX40" target="_blank" class="quick-link">
+                                <i class="fab fa-youtube"></i>
+                                <span>YouTube Channel</span>
+                            </a>
+                            <a href="shop.html" class="quick-link">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Music Shop</span>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div class="podcast-section">
                     <h3>Podcasts</h3>
                     <p>Spannende Einblicke, ehrliche Gespräche und jede Menge Inspiration.</p>
+                    
+                    <!-- Podcast Player -->
+                    <div class="podcast-player">
+                        <iframe 
+                            style="border-radius:12px" 
+                            src="https://open.spotify.com/embed/episode/0GNtGnZ4l1JHdwJ4Sr2mng?utm_source=generator&utm_campaign=embed&utm_medium=desktop" 
+                            width="100%" 
+                            height="232" 
+                            frameborder="0" 
+                            allowfullscreen="" 
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    
                     <div class="podcast-list">
-                        <div class="podcast-item">
+                        <div class="podcast-item active" data-podcast="episode1">
                             <i class="fas fa-microphone"></i>
                             <div class="podcast-info">
-                                <h4>Bussi Baba | Radio Rudina</h4>
-                                <p>Episode 12 - Winter Vibes</p>
+                                <h4>Bussi Baba | Im Gespräch mit Rolf und Sebi</h4>
+                                <p>Constantly Changing Constantly K - 47 min</p>
                             </div>
                         </div>
-                        <div class="podcast-item">
+                        <div class="podcast-item" data-podcast="episode2">
                             <i class="fas fa-microphone"></i>
                             <div class="podcast-info">
-                                <h4>Behind the Decks</h4>
-                                <p>Episode 8 - Studio Session</p>
+                                <h4>Two Beers Tuesday - Bussi Baba</h4>
+                                <p>#44 - DJ Wiz Junior & DJ Roa - 1 hr 13 min</p>
                             </div>
                         </div>
                     </div>
@@ -284,8 +420,8 @@
                     <ul>
                         <li><a href="#home">Home</a></li>
                         <li><a href="#events">Events</a></li>
-                        <li><a href="#tickets">Tickets</a></li>
-                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                        <li><a href="shop.html">Shop</a></li>
                         <li><a href="#music">Music</a></li>
                         <li><a href="#booking">Booking</a></li>
                         <li><a href="#contact">Kontakt</a></li>
