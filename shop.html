@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bussi Baba Shop - Merchandise, Music, Tickets. No gossip just dancing.">
+    <title>Shop - Bussi Baba</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">BUSSI BABA</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#events" class="nav-link">Events</a>
+                <a href="tickets.html" class="nav-link">Tickets</a>
+                <a href="shop.html" class="nav-link active">Shop</a>
+                <a href="index.html#music" class="nav-link">Music</a>
+                <a href="index.html#booking" class="nav-link">Booking</a>
+                <a href="index.html#contact" class="nav-link">Kontakt</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Hero -->
+    <section class="shop-hero">
+        <div class="container">
+            <div class="shop-hero-content">
+                <h1>Bussi Baba Shop</h1>
+                <p>Entdecke unsere handverlesene Kollektion an Merchandise, Musik und mehr.</p>
+                <div class="shop-categories">
+                    <a href="#merchandise" class="category-btn active">Merchandise</a>
+                    <a href="#music" class="category-btn">Music</a>
+                    <a href="#tickets" class="category-btn">Tickets</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Merchandise Section -->
+    <section id="merchandise" class="shop-section">
+        <div class="container">
+            <h2 class="section-title">Merchandise</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="product-badge">Bestseller</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Bussi Baba T-Shirt</h3>
+                        <p class="product-description">Premium Baumwolle mit dem ikonischen Bussi Baba Design</p>
+                        <div class="product-price">
+                            <span class="price">€29.99</span>
+                            <span class="original-price">€39.99</span>
+                        </div>
+                        <div class="product-sizes">
+                            <span class="size-tag">S</span>
+                            <span class="size-tag">M</span>
+                            <span class="size-tag">L</span>
+                            <span class="size-tag">XL</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-hat-cowboy"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Bussi Baba Cap</h3>
+                        <p class="product-description">Stylische Cap mit gesticktem Logo</p>
+                        <div class="product-price">
+                            <span class="price">€19.99</span>
+                        </div>
+                        <div class="product-sizes">
+                            <span class="size-tag">One Size</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-mug-hot"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Bussi Baba Mug</h3>
+                        <p class="product-description">Keramik Tasse mit Bussi Baba Design</p>
+                        <div class="product-price">
+                            <span class="price">€12.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">In den Warenkorb</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-sticky-note"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Bussi Baba Sticker Pack</h3>
+                        <p class="product-description">Set von 5 hochwertigen Aufklebern</p>
+                        <div class="product-price">
+                            <span class="price">€8.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">In den Warenkorb</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="shop-section">
+        <div class="container">
+            <h2 class="section-title">Music & Downloads</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-compact-disc"></i>
+                        </div>
+                        <div class="product-badge">Digital</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Bussi Baba Mixtape Vol. 1</h3>
+                        <p class="product-description">Digital Download - 45 Minuten pure Vibes</p>
+                        <div class="product-price">
+                            <span class="price">€9.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Download</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-vinyl"></i>
+                        </div>
+                        <div class="product-badge">Vinyl</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Bussi Baba Vinyl Collection</h3>
+                        <p class="product-description">Limited Edition Vinyl Box Set</p>
+                        <div class="product-price">
+                            <span class="price">€49.99</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Vorbestellen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tickets Section -->
+    <section id="tickets" class="shop-section">
+        <div class="container">
+            <h2 class="section-title">Event Tickets</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <div class="product-badge">Early Bird</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Winter Vibes - Early Bird</h3>
+                        <p class="product-description">15. Dezember - Vienna Club</p>
+                        <div class="product-price">
+                            <span class="price">€25.00</span>
+                            <span class="original-price">€35.00</span>
+                        </div>
+                        <div class="ticket-info">
+                            <span><i class="fas fa-clock"></i> 22:00 - 04:00</span>
+                            <span><i class="fas fa-users"></i> Limited</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Kaufen</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <h3>Christmas Beats</h3>
+                        <p class="product-description">22. Dezember - Salzburg Arena</p>
+                        <div class="product-price">
+                            <span class="price">€30.00</span>
+                        </div>
+                        <div class="ticket-info">
+                            <span><i class="fas fa-clock"></i> 21:00 - 03:00</span>
+                            <span><i class="fas fa-users"></i> Available</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Kaufen</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <div class="product-placeholder">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <div class="product-badge">VIP</div>
+                    </div>
+                    <div class="product-content">
+                        <h3>New Year's Eve VIP</h3>
+                        <p class="product-description">31. Dezember - Graz Central</p>
+                        <div class="product-price">
+                            <span class="price">€75.00</span>
+                        </div>
+                        <div class="ticket-info">
+                            <span><i class="fas fa-clock"></i> 20:00 - 06:00</span>
+                            <span><i class="fas fa-star"></i> VIP Package</span>
+                        </div>
+                        <button class="btn btn-primary add-to-cart">Kaufen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Warenkorb</h3>
+            <button class="cart-close" id="cart-close">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be added here dynamically -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Gesamt:</span>
+                <span id="cart-total">€0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Zur Kasse</button>
+        </div>
+    </div>
+
+    <!-- Cart Toggle Button -->
+    <div class="cart-toggle" id="cart-toggle">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BUSSI BABA</h3>
+                    <p>No gossip just dancing</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-soundcloud"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#events">Events</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html#music">Music</a></li>
+                        <li><a href="index.html#booking">Booking</a></li>
+                        <li><a href="index.html#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Versand</a></li>
+                        <li><a href="#">Widerruf</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p><i class="fas fa-envelope"></i> info@bussi-baba.at</p>
+                    <p><i class="fas fa-phone"></i> +43 123 456 789</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Österreich</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bussi Baba. Alle Rechte vorbehalten.</p>
+                <p>CO2 neutral erstellter Webshop</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="shop.js"></script>
+</body>
+</html>

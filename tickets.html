@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bussi Baba Tickets - Event Tickets für House, Electro, Techno Events in Österreich.">
+    <title>Tickets - Bussi Baba</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">BUSSI BABA</a>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#events" class="nav-link">Events</a>
+                <a href="tickets.html" class="nav-link active">Tickets</a>
+                <a href="shop.html" class="nav-link">Shop</a>
+                <a href="index.html#music" class="nav-link">Music</a>
+                <a href="index.html#booking" class="nav-link">Booking</a>
+                <a href="index.html#contact" class="nav-link">Kontakt</a>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tickets Hero -->
+    <section class="tickets-hero">
+        <div class="container">
+            <div class="tickets-hero-content">
+                <h1>Event Tickets</h1>
+                <p>Erlebe die besten House, Electro und Techno Events von Bussi Baba</p>
+                <div class="ticket-filters">
+                    <button class="filter-btn active" data-filter="all">Alle Events</button>
+                    <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-btn" data-filter="vip">VIP</button>
+                    <button class="filter-btn" data-filter="early-bird">Early Bird</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Event -->
+    <section class="featured-event">
+        <div class="container">
+            <div class="featured-event-card">
+                <div class="featured-event-image">
+                    <div class="event-placeholder">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="featured-badge">Featured Event</div>
+                </div>
+                <div class="featured-event-content">
+                    <h2>New Year's Eve Special</h2>
+                    <p class="event-date"><i class="fas fa-calendar"></i> 31. Dezember 2024</p>
+                    <p class="event-location"><i class="fas fa-map-marker-alt"></i> Graz Central, Graz</p>
+                    <p class="event-time"><i class="fas fa-clock"></i> 20:00 - 06:00</p>
+                    <div class="event-description">
+                        <p>Das größte Event des Jahres! Feiere mit uns den Jahreswechsel mit den besten DJs und der wildesten Musik. VIP-Packages inklusive exklusiver Bereiche und Premium-Service.</p>
+                    </div>
+                    <div class="event-genres">
+                        <span class="genre-tag">House</span>
+                        <span class="genre-tag">Techno</span>
+                        <span class="genre-tag">Electro</span>
+                    </div>
+                    <div class="ticket-options">
+                        <div class="ticket-option">
+                            <span class="ticket-type">Regular</span>
+                            <span class="ticket-price">€45.00</span>
+                            <button class="btn btn-primary">Kaufen</button>
+                        </div>
+                        <div class="ticket-option featured">
+                            <span class="ticket-type">VIP Package</span>
+                            <span class="ticket-price">€75.00</span>
+                            <button class="btn btn-secondary">Kaufen</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Events -->
+    <section class="all-events">
+        <div class="container">
+            <h2 class="section-title">Alle Events</h2>
+            <div class="events-grid">
+                <div class="event-card" data-category="upcoming early-bird">
+                    <div class="event-image">
+                        <div class="event-date">
+                            <span class="day">15</span>
+                            <span class="month">DEZ</span>
+                        </div>
+                        <div class="event-badge">Early Bird</div>
+                    </div>
+                    <div class="event-content">
+                        <h3>Winter Vibes</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Vienna Club, Wien</p>
+                        <p class="event-time"><i class="fas fa-clock"></i> 22:00 - 04:00</p>
+                        <div class="event-genres">
+                            <span class="genre-tag">House</span>
+                            <span class="genre-tag">Techno</span>
+                        </div>
+                        <div class="ticket-prices">
+                            <div class="price-option">
+                                <span class="price">€25.00</span>
+                                <span class="original-price">€35.00</span>
+                                <span class="price-label">Early Bird</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Tickets kaufen</button>
+                    </div>
+                </div>
+
+                <div class="event-card" data-category="upcoming">
+                    <div class="event-image">
+                        <div class="event-date">
+                            <span class="day">22</span>
+                            <span class="month">DEZ</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3>Christmas Beats</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Salzburg Arena, Salzburg</p>
+                        <p class="event-time"><i class="fas fa-clock"></i> 21:00 - 03:00</p>
+                        <div class="event-genres">
+                            <span class="genre-tag">Deep House</span>
+                            <span class="genre-tag">Afro House</span>
+                        </div>
+                        <div class="ticket-prices">
+                            <div class="price-option">
+                                <span class="price">€30.00</span>
+                                <span class="price-label">Regular</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Tickets kaufen</button>
+                    </div>
+                </div>
+
+                <div class="event-card" data-category="upcoming vip">
+                    <div class="event-image">
+                        <div class="event-date">
+                            <span class="day">31</span>
+                            <span class="month">DEZ</span>
+                        </div>
+                        <div class="event-badge">VIP</div>
+                    </div>
+                    <div class="event-content">
+                        <h3>New Year's Eve VIP</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Graz Central, Graz</p>
+                        <p class="event-time"><i class="fas fa-clock"></i> 20:00 - 06:00</p>
+                        <div class="event-genres">
+                            <span class="genre-tag">Tech House</span>
+                            <span class="genre-tag">Electro</span>
+                        </div>
+                        <div class="ticket-prices">
+                            <div class="price-option">
+                                <span class="price">€75.00</span>
+                                <span class="price-label">VIP Package</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Tickets kaufen</button>
+                    </div>
+                </div>
+
+                <div class="event-card" data-category="upcoming">
+                    <div class="event-image">
+                        <div class="event-date">
+                            <span class="day">12</span>
+                            <span class="month">JAN</span>
+                        </div>
+                    </div>
+                    <div class="event-content">
+                        <h3>January Groove</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Linz Club, Linz</p>
+                        <p class="event-time"><i class="fas fa-clock"></i> 23:00 - 05:00</p>
+                        <div class="event-genres">
+                            <span class="genre-tag">House</span>
+                            <span class="genre-tag">Groove</span>
+                        </div>
+                        <div class="ticket-prices">
+                            <div class="price-option">
+                                <span class="price">€28.00</span>
+                                <span class="price-label">Regular</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Tickets kaufen</button>
+                    </div>
+                </div>
+
+                <div class="event-card" data-category="upcoming early-bird">
+                    <div class="event-image">
+                        <div class="event-date">
+                            <span class="day">25</span>
+                            <span class="month">JAN</span>
+                        </div>
+                        <div class="event-badge">Early Bird</div>
+                    </div>
+                    <div class="event-content">
+                        <h3>Winter Techno</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Innsbruck Arena, Innsbruck</p>
+                        <p class="event-time"><i class="fas fa-clock"></i> 22:00 - 04:00</p>
+                        <div class="event-genres">
+                            <span class="genre-tag">Techno</span>
+                            <span class="genre-tag">Industrial</span>
+                        </div>
+                        <div class="ticket-prices">
+                            <div class="price-option">
+                                <span class="price">€22.00</span>
+                                <span class="original-price">€32.00</span>
+                                <span class="price-label">Early Bird</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Tickets kaufen</button>
+                    </div>
+                </div>
+
+                <div class="event-card" data-category="upcoming vip">
+                    <div class="event-image">
+                        <div class="event-date">
+                            <span class="day">08</span>
+                            <span class="month">FEB</span>
+                        </div>
+                        <div class="event-badge">VIP</div>
+                    </div>
+                    <div class="event-content">
+                        <h3>Valentine's Special</h3>
+                        <p class="event-location"><i class="fas fa-map-marker-alt"></i> Vienna Opera House, Wien</p>
+                        <p class="event-time"><i class="fas fa-clock"></i> 21:00 - 03:00</p>
+                        <div class="event-genres">
+                            <span class="genre-tag">Deep House</span>
+                            <span class="genre-tag">Lounge</span>
+                        </div>
+                        <div class="ticket-prices">
+                            <div class="price-option">
+                                <span class="price">€65.00</span>
+                                <span class="price-label">VIP Package</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Tickets kaufen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ticket Information -->
+    <section class="ticket-info">
+        <div class="container">
+            <h2 class="section-title">Ticket Information</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-ticket-alt"></i>
+                    </div>
+                    <h3>Ticket Kategorien</h3>
+                    <ul>
+                        <li><strong>Regular:</strong> Standard Eintritt</li>
+                        <li><strong>Early Bird:</strong> Vergünstigte Tickets (begrenzt)</li>
+                        <li><strong>VIP:</strong> Premium Service mit exklusiven Bereichen</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Öffnungszeiten</h3>
+                    <ul>
+                        <li><strong>Einlass:</strong> Ab 21:00 Uhr</li>
+                        <li><strong>Hauptprogramm:</strong> 22:00 - 04:00 Uhr</li>
+                        <li><strong>After Hours:</strong> Bis 06:00 Uhr (ausgewählte Events)</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3>Wichtige Hinweise</h3>
+                    <ul>
+                        <li>Mindestalter: 18 Jahre</li>
+                        <li>Ausweis erforderlich</li>
+                        <li>Keine Rückerstattung</li>
+                        <li>Dresscode: Casual</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Fragen zu Tickets?</h2>
+                <p>Kontaktiere uns für Support und weitere Informationen</p>
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <i class="fas fa-envelope"></i>
+                        <span>tickets@bussi-baba.at</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fas fa-phone"></i>
+                        <span>+43 123 456 789</span>
+                    </div>
+                    <div class="contact-method">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp Support</span>
+                    </div>
+                </div>
+                <button class="btn btn-primary">Kontakt aufnehmen</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BUSSI BABA</h3>
+                    <p>No gossip just dancing</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-soundcloud"></i></a>
+                        <a href="#"><i class="fab fa-spotify"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#events">Events</a></li>
+                        <li><a href="tickets.html">Tickets</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="index.html#music">Music</a></li>
+                        <li><a href="index.html#booking">Booking</a></li>
+                        <li><a href="index.html#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="#">Impressum</a></li>
+                        <li><a href="#">Datenschutz</a></li>
+                        <li><a href="#">AGB</a></li>
+                        <li><a href="#">Versand</a></li>
+                        <li><a href="#">Widerruf</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <p><i class="fas fa-envelope"></i> info@bussi-baba.at</p>
+                    <p><i class="fas fa-phone"></i> +43 123 456 789</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Österreich</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Bussi Baba. Alle Rechte vorbehalten.</p>
+                <p>CO2 neutral erstellter Webshop</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="tickets.js"></script>
+</body>
+</html>
